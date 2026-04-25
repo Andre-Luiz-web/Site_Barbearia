@@ -1,4 +1,4 @@
-📌 Descrição do Projeto
+ 📌 Descrição do Projeto
 Este é um projeto pessoal desenvolvido com o objetivo de criar um site para agendamento de horários em uma barbearia.
 O foco principal foi oferecer uma interface moderna, responsiva e intuitiva, permitindo que os clientes escolham seu barbeiro preferido, definam data e horário, e adicionem observações importantes para o atendimento.
 
