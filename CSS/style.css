@@ -1,0 +1,342 @@
+/* -------Variaveis ja Estabelecidas ---------- */
+:root{
+    --Cor-de-Fundo: black;
+    --Vermelho: red;
+    --Vinho: rgb(134, 29, 29);
+    --Cor-text: #d3ad7f;
+    --Borda: 0.1rem solid rgba(255,255,255,0.3);
+      font-size: 10px;
+}
+
+/* ------- Reset da Pagina WEB ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--Cor-de-Fundo);
+    font-family: "Playfair Display", serif;
+}
+
+
+/* --------------------- BARRA DE NAVEGAÇÂO ----------------------- */
+.nav_bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20rem;
+    padding: 1.5rem 3rem;
+    border-bottom: var(--Borda);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: var(--Cor-de-Fundo);
+    z-index: 1000;
+}
+
+.logo img {
+    height: 5.7rem;
+}
+
+.nav_links {
+    list-style: none;
+    display: flex;
+    gap: 8rem;
+}
+
+.nav_links a {
+    color: white;
+    font-size: 2rem;
+    position: relative;
+    transition: color 0.9s ease;    
+}
+
+.nav_links a::after {  /* Efeito de traço no link */
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.3rem;
+    width: 0%;
+    height: 0.2rem;
+    background-color: var(--Vermelho);
+    transition: width 0.7s ease;
+}
+
+.nav_links a:hover {
+    color: var(--Vermelho);
+}
+
+.nav_links a:hover::after {
+    width: 100%;
+}
+
+
+
+/* --------------------- HOME ----------------------- */
+.home_principal {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    color: white;
+    padding: 2rem 6rem;
+    background: url(/img/Fundo_Barbearia.jpg) center/cover no-repeat;
+}
+
+.home_principal h3 {
+    font-size: 4.7rem;
+    margin-bottom: 2rem;
+    max-width: 50%;
+    padding: 2rem 5rem;
+}
+
+.botao_agendar {
+    background-color: var(--Vinho);
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    border-radius: 2rem;
+    transition: background-color 0.9s ease;
+    margin-left: 5rem;
+    display: inline-block; 
+    text-decoration: none; 
+}
+
+.botao_agendar:hover {
+    background-color: var(--Vermelho);
+}
+
+
+
+/* --------------------- SERVIÇOS ----------------------- */
+.sevicos_principal {
+    padding: 8rem 5rem;
+    text-align: center;
+    color: var(--Cor-text);
+}
+
+.sevico_principal h2 {
+    font-size: 3rem;
+    margin-bottom: 7rem;
+    letter-spacing: 0.2rem;      
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 9rem;
+    color: var(--Cor-text);  
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap; /* permite quebrar linha em telas menores */
+}
+
+.card {
+    background-color: #6b4420 ;
+    color: rgb(0, 0, 0);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    width: 28rem;
+    text-align: center;
+    transition: transform 0.3 ease, box-shasw 0.3 ease;
+}
+
+.card img {
+    height: 7rem;
+    margin-bottom: 1.5rem;
+}
+.card h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: rgb(0, 0, 0);
+}
+
+.card p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+
+
+/* --------------------- SOBRE ----------------------- */
+.sobre_principal {
+    padding: 10rem 6rem;
+    color: white;
+    text-align: center; 
+}
+
+.sobre_principal h2 {
+    font-size: 3rem;
+    margin-bottom: 7rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: var(--Cor-text);
+}
+
+.sobre_conteiner {
+    display: flex;
+    justify-content: center;   
+    align-items: center;      
+    gap: 5rem;                
+    max-width: 1200px;        
+    margin: 0 auto;              
+}
+
+.sobre_img img {
+    width: 60rem;
+    border-radius: 1rem;
+}
+
+.sobre_tex {
+    max-width: 50rem;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+}
+
+.sobre_text p {
+    font-size: 1.9rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.botao_sobre {
+    background-color: var(--Vinho);
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    border-radius: 2rem;
+    transition: background-color 0.9s ease;
+    display: inline-block; 
+    text-decoration: none; 
+}
+
+.botao_sobre:hover {
+    background-color: var(--Vermelho);
+}
+
+
+
+/* --------------------- FUNCIONARIOS ----------------------- */
+.funcionarios_principal {
+    padding: 9rem 6rem;
+    text-align: center;
+    color: white;
+}
+
+.funcionarios_principal h2 {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: var(--Cor-text);
+}
+
+.funcionarios_conteiner {
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr); /* 3 colunas */
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.funcionario_card {
+    background-color: #6b4420;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+    color: black;
+}
+
+.funcionario_card img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.funcionario_card h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.funcionario_card p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+
+/* --------------------- LOCALIZAÇAO ----------------------- */
+.localizacao_principal {
+    padding: 8rem 5rem;
+    text-align: center;
+    color: white;
+}
+
+.localizacao_principal h2 {
+    font-size: 3rem;
+    margin-bottom: 7rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: var(--Cor-text);
+}
+
+.mapa iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    border: none;
+    border-radius: 1rem;
+    margin-bottom: 7rem;
+}
+
+.horario {
+    margin-bottom: 9rem; 
+}
+
+.horario p {
+    font-size: 3rem; 
+    font-weight: bold; 
+    color: white;
+}
+
+.horario h3 {
+    font-size: 2rem;
+    color: var(--Cor-text);
+    margin-bottom: 1rem;
+}
+
+
+/* --------------------- CONTATOS ----------------------- */
+.contatos {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.contatos img {
+    width: 4rem;  
+    height: auto;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.contatos img:hover {
+    transform: scale(1.2); /* efeito de zoom ao passar o mouse */
+}
+
+
+
+

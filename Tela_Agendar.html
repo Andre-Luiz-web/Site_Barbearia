@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/style_Agendar.css">
+    <title>Agendar</title>
+</head>
+<body>
+    
+  <section class="agendar_pagina">
+    
+        <h2>Agende seu horário</h2>
+
+    <form class="form_agendar">
+        
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+        <label for="telefone">Telefone / WhatsApp:</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone" required>
+
+        <label for="barbeiro">Barbeiro Preferido:</label>
+        
+        <select id="barbeiro" name="barbeiro" required>
+            <option value="">Selecione...</option>
+            <option value="joao">João — cortes clássicos</option>
+            <option value="pedro">Pedro — fade e modernos</option>
+            <option value="marcos">Marcos — barba e acabamento</option>
+            <option value="rafael">Rafael — coloração e tratamento</option>
+            <option value="Qualquer_um">Qualquer Barbeiro(a) </option>
+        </select>
+
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data" required>
+
+        <label for="hora">Horário:</label>
+        <input type="time" id="hora" name="hora" required>
+
+        <label for="obs">Observações:  (opcional)</label>
+        <textarea id="obs" name="obs" rows="4" placeholder="( Alergia a Produto ) /  ( Tipo de Serviço ) / ( Observação Importante )"></textarea>
+
+        <button type="submit" class="botao_agendar">Agendar</button>
+    
+    </form>
+
+  </section>
+
+<script src="/Js/script_Tela_Agendar.js"></script>
+</body>
+</html>
